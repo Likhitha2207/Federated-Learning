@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MOBILE AUTHENTICATION PAGE</title>
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">-->
+    <style>
+        .mylogin {
+            background-color:#3457D5; 
+            border:2px solid white;
+            color: white; 
+            padding: 8px 28px; 
+            text-align: center;
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px;
+            cursor: pointer; 
+            border-radius: 12px;
+        }
+        .mylogin:hover {
+            background-color: white;
+            border:3px solid #3457D5;
+            color: #3457D5;
+        }
+        .login_container{
+            padding-top: 1%;
+            padding-left: 1%;
+            padding-right: 1%;;
+            border: solid;
+            border-radius: 20px;
+            position:absolute;
+            top:30%;
+            left:52%;
+        }
+        .login_container table tr td{
+            font-size: large;
+        }
+        th, td{
+            padding: 10px;
+        }
+        input[type="text"]{
+            width: 200px;
+            height: 35px;
+            border-radius: 7px;
+        }
+        input[type="number"]{
+            width: 200px;
+            height: 35px;
+            border-radius: 7px;
+        }
+        input[type="password"]{
+            width: 200px;
+            height: 35px;
+            border-radius: 7px;
+        }
+        .img_container{
+            position:absolute;
+            top:10%;
+            left:10%;
+        }
+        .image{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "img_container">
+        <img class = "image" src = "static\images\mobile_auth.gif">
+    </div>
+    <div class = login_container>
+        <center><h2>MOBILE AUTHENTICATION DETAILS</h2></center>
+        <table>
+            <form action = "/mobile_auth" method = "post">
+                <tr>
+                    <td><b><label>MODEL USED :</label></b></td>
+                    <td><input type="text" name = "model" placeholder="Enter your model name"/></td>
+                </tr>
+                <tr>
+                    <td><b><label>MOBILE NUMBER :</label></b></td>
+                    <td><input type="text" name = "number" value="+919014722547" readonly/></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><button class = "mylogin">SEND OTP</button></th>
+                </tr>
+            </form>
+        </table>
+    </div>
+</body>
+</html>
